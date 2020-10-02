@@ -1,6 +1,9 @@
 const axios = require('axios');
 const cheerio = require('cheerio'); // NEW PACKAGE - for parsing HTML (basically jQuery)
 
+// Cron job needed: https://npmcompare.com/compare/cron,node-cron,node-schedule
+
+
 const readDataFromSite = async () => {
     try {
 

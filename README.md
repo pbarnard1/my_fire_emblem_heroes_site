@@ -8,4 +8,4 @@ This page will eventually contain a summon simulator that is customizable and wi
 This page will eventually be a predictor with tons of visuals for the Voting Gauntlet, a monthly event in FEH.
 
 ## Orb calendar
-This will contain information on the number of orbs one can earn daily in FEH.  This will allow you to customize features like earning orbs for attaining tier 21 in Arena and getting 950 or more in Alleigance Battles.
+This will contain information on the number of orbs one can earn daily in FEH.  This will allow you to customize features like earning orbs for attaining tier 21 in Arena and getting 950 or more in Allegiance Battles.
