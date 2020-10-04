@@ -16,3 +16,7 @@ const OrbDaySchema = new mongoose.Schema({
 }, { timestamps: true });
 
 module.exports.OrbDay = mongoose.model('OrbDay', OrbDaySchema);
+
+// PROPOSED CHANGE:
+// Instead of columns for each day, organize by group type (e.g. story chapters, chain challenges)
+// [Name of event (in strings), # for day 1, # for day 2, etc.]
