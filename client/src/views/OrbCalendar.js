@@ -1,6 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TableContainer, Table, TableRow, TableHead, TableBody, TableCell, makeStyles, Tooltip } from '@material-ui/core';
+import { Button, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from '@material-ui/core';
+
 // Type "npm i @material-ui/core" to use Material UI
+
+
+// For calendars: npm i @material-ui/pickers
+// Link: https://material-ui-pickers.dev/
+// Calendar for mobile view and as an option for desktop view
+// "npm i @material-ui/pickers"
+
+// Use dialog for getting number of orbs between two dates:
+// Link https://material-ui.com/components/dialogs/ (go to Form Dialogs for more info)
+
 
 const dates = [];
 for (let k = 1; k <= 31; k++) {
@@ -24,7 +36,16 @@ const myTableStyles = makeStyles({
 }); 
 
 export default (props) => {
+    const [isOrbFormOpen, setOrbFormOpen] = useState(false);
     const tableClasses = myTableStyles();
+
+    const handleClose = () => {
+        setOrbFormOpen(false);
+    }
+
+    const handleClickOpen = () => {
+        setOrbFormOpen(true);
+    }
 
     return(
         <div>
@@ -114,6 +135,32 @@ export default (props) => {
                     </tr>
                 </tbody>
             </table>
+            <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+                Calculate orbs
+            </Button>
+            <Dialog
+                open={isOrbFormOpen}
+                onClose={handleClose}
+               
+                aria-labelledby="draggable-dialog-title"
+            >
+                <DialogTitle style={{ cursor: 'move' }} id="draggable-dialog-title">
+                    Calculate orbs between two dates
+                </DialogTitle>
+                <DialogContent>
+                    <DialogContentText>
+                        Enter two dates here - placeholder
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button autoFocus onClick={handleClose} color="primary">
+                        Cancel
+                    </Button>
+                    <Button onClick={handleClose} color="primary">
+                        Calculate
+                    </Button>
+                </DialogActions>
+            </Dialog>
         </div>
     );
 }
