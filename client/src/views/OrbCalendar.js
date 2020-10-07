@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { TableContainer, Table, TableRow, TableHead, TableBody, TableCell, makeStyles, Tooltip } from '@material-ui/core';
 import { Button, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from '@material-ui/core';
+import { Link } from '@reach/router';
 
 // Type "npm i @material-ui/core" to use Material UI
 
@@ -161,6 +162,7 @@ export default (props) => {
                     </Button>
                 </DialogActions>
             </Dialog>
+            <Link to="/edit_orb_calendar">Edit Orb Calendar</Link>
         </div>
     );
 }
